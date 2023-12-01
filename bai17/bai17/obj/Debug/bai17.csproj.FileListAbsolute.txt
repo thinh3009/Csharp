@@ -1,0 +1,7 @@
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai17\bai17\bin\Debug\bai17.exe.config
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai17\bai17\bin\Debug\bai17.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai17\bai17\bin\Debug\bai17.pdb
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai17\bai17\obj\Debug\bai17.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai17\bai17\obj\Debug\bai17.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai17\bai17\obj\Debug\bai17.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai17\bai17\obj\Debug\bai17.pdb

@@ -1,0 +1,10 @@
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai17\winformbai17\bin\Debug\winformbai17.exe.config
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai17\winformbai17\bin\Debug\winformbai17.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai17\winformbai17\bin\Debug\winformbai17.pdb
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai17\winformbai17\obj\Debug\winformbai17.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai17\winformbai17\obj\Debug\winformbai17.Form1.resources
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai17\winformbai17\obj\Debug\winformbai17.Properties.Resources.resources
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai17\winformbai17\obj\Debug\winformbai17.csproj.GenerateResource.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai17\winformbai17\obj\Debug\winformbai17.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai17\winformbai17\obj\Debug\winformbai17.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai17\winformbai17\obj\Debug\winformbai17.pdb

@@ -1,0 +1,10 @@
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai14\baitaap\bin\Debug\baitaap.exe.config
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai14\baitaap\bin\Debug\baitaap.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai14\baitaap\bin\Debug\baitaap.pdb
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai14\baitaap\obj\Debug\baitaap.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai14\baitaap\obj\Debug\baitaap.Form1.resources
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai14\baitaap\obj\Debug\baitaap.Properties.Resources.resources
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai14\baitaap\obj\Debug\baitaap.csproj.GenerateResource.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai14\baitaap\obj\Debug\baitaap.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai14\baitaap\obj\Debug\baitaap.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai14\baitaap\obj\Debug\baitaap.pdb

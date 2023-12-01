@@ -1,0 +1,7 @@
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai3\baitapBai3\bin\Debug\baitapBai3.exe.config
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai3\baitapBai3\bin\Debug\baitapBai3.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai3\baitapBai3\bin\Debug\baitapBai3.pdb
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai3\baitapBai3\obj\Debug\baitapBai3.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai3\baitapBai3\obj\Debug\baitapBai3.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai3\baitapBai3\obj\Debug\baitapBai3.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai3\baitapBai3\obj\Debug\baitapBai3.pdb

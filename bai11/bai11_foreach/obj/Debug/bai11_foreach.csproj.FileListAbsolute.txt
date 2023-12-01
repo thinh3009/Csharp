@@ -1,0 +1,7 @@
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\bai11_foreach\bin\Debug\bai11_foreach.exe.config
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\bai11_foreach\bin\Debug\bai11_foreach.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\bai11_foreach\bin\Debug\bai11_foreach.pdb
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\bai11_foreach\obj\Debug\bai11_foreach.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\bai11_foreach\obj\Debug\bai11_foreach.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\bai11_foreach\obj\Debug\bai11_foreach.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\bai11_foreach\obj\Debug\bai11_foreach.pdb

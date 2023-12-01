@@ -1,0 +1,7 @@
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18\baitap4\bin\Debug\baitap4.exe.config
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18\baitap4\bin\Debug\baitap4.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18\baitap4\bin\Debug\baitap4.pdb
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18\baitap4\obj\Debug\baitap4.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18\baitap4\obj\Debug\baitap4.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18\baitap4\obj\Debug\baitap4.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18\baitap4\obj\Debug\baitap4.pdb

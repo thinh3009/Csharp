@@ -1,0 +1,7 @@
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18.1_lamviecFile\bai18.1_lamviecFile\bin\Debug\bai18.1_lamviecFile.exe.config
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18.1_lamviecFile\bai18.1_lamviecFile\bin\Debug\bai18.1_lamviecFile.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18.1_lamviecFile\bai18.1_lamviecFile\bin\Debug\bai18.1_lamviecFile.pdb
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18.1_lamviecFile\bai18.1_lamviecFile\obj\Debug\bai18.1_lamviecFile.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18.1_lamviecFile\bai18.1_lamviecFile\obj\Debug\bai18.1_lamviecFile.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18.1_lamviecFile\bai18.1_lamviecFile\obj\Debug\bai18.1_lamviecFile.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18.1_lamviecFile\bai18.1_lamviecFile\obj\Debug\bai18.1_lamviecFile.pdb

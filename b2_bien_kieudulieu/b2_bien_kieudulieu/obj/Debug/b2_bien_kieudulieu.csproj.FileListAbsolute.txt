@@ -1,0 +1,7 @@
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\b2_bien_kieudulieu\b2_bien_kieudulieu\obj\Debug\b2_bien_kieudulieu.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\b2_bien_kieudulieu\b2_bien_kieudulieu\obj\Debug\b2_bien_kieudulieu.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\b2_bien_kieudulieu\b2_bien_kieudulieu\bin\Debug\b2_bien_kieudulieu.exe.config
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\b2_bien_kieudulieu\b2_bien_kieudulieu\bin\Debug\b2_bien_kieudulieu.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\b2_bien_kieudulieu\b2_bien_kieudulieu\bin\Debug\b2_bien_kieudulieu.pdb
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\b2_bien_kieudulieu\b2_bien_kieudulieu\obj\Debug\b2_bien_kieudulieu.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\b2_bien_kieudulieu\b2_bien_kieudulieu\obj\Debug\b2_bien_kieudulieu.pdb

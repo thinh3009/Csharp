@@ -1,0 +1,10 @@
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai10\baitap\bin\Debug\baitap.exe.config
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai10\baitap\bin\Debug\baitap.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai10\baitap\bin\Debug\baitap.pdb
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai10\baitap\obj\Debug\baitap.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai10\baitap\obj\Debug\baitap.Form1.resources
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai10\baitap\obj\Debug\baitap.Properties.Resources.resources
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai10\baitap\obj\Debug\baitap.csproj.GenerateResource.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai10\baitap\obj\Debug\baitap.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai10\baitap\obj\Debug\baitap.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai10\baitap\obj\Debug\baitap.pdb

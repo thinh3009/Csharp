@@ -1,0 +1,7 @@
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\baitapb11_5\bin\Debug\baitapb11_5.exe.config
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\baitapb11_5\bin\Debug\baitapb11_5.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\baitapb11_5\bin\Debug\baitapb11_5.pdb
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\baitapb11_5\obj\Debug\baitapb11_5.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\baitapb11_5\obj\Debug\baitapb11_5.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\baitapb11_5\obj\Debug\baitapb11_5.exe
+C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai11\baitapb11_5\obj\Debug\baitapb11_5.pdb
