@@ -5,3 +5,10 @@ C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\OOP\OOP\obj\Debug\OOP.csproj.
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\OOP\OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\OOP\OOP\obj\Debug\OOP.exe
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\OOP\OOP\obj\Debug\OOP.pdb
+D:\new\Csharp\OOP\OOP\bin\Debug\OOP.exe.config
+D:\new\Csharp\OOP\OOP\bin\Debug\OOP.exe
+D:\new\Csharp\OOP\OOP\bin\Debug\OOP.pdb
+D:\new\Csharp\OOP\OOP\obj\Debug\OOP.csproj.AssemblyReference.cache
+D:\new\Csharp\OOP\OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
+D:\new\Csharp\OOP\OOP\obj\Debug\OOP.exe
+D:\new\Csharp\OOP\OOP\obj\Debug\OOP.pdb

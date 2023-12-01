@@ -14,35 +14,23 @@ namespace OOP
         {
 
             Console.OutputEncoding = Encoding.UTF8;
-            /*Console.Write("Nhap ten ngan hang: ");
-            string tenNgaHang=Console.ReadLine();
-
-            Console.Write("Nhap stk: ");
-            string soTK=Console.ReadLine();
-
-            Console.Write("nhap ten cong ty: ");
-            string tenCty=Console.ReadLine();
-            Console.Write("nhap dia chi: ");
-            string diaChi = Console.ReadLine();
-            Console.Write("nhap ma so thue: ");
-            string maSoThue = Console.ReadLine();
-            Console.Write("hinh thuc thanh toan: ");
-            string hinhThucThanhToan = Console.ReadLine();
-            Console.Write("web: ");
-            string webSite = Console.ReadLine();
             
             
-            CongTy cty = new CongTy(tenNgaHang,soTK,tenCty,diaChi,maSoThue,hinhThucThanhToan,webSite);
-            TenHang hang= new TenHang(tenSp, maSp, donVi, soLuong,  donGia,  thanhTien);
-            NganHang bank = new NganHang(tenNgaHang, soTK);
+            
+            CongTy cty = new CongTy();
+            TenHang hang= new TenHang();
+            NganHang bank = new NganHang();
             cty.XuatNganHang();
             cty.XuatCongty();
-            bank.XuatNganHang();*/
-            TenHang hang= new TenHang();
+            bank.XuatNganHang();
+            
+            
+
             hang.NhapHang();
             hang.XuatHang();
             double tinh = hang.KtraGiamGia();
             Console.WriteLine(tinh);
+
             Console.ReadKey();
             
         }

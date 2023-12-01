@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP
 {
-    internal class TenHang
+    public class TenHang
     {
         public string TenSp { get; set; }
         public string MaSp { get; set; }

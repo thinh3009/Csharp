@@ -11,34 +11,22 @@ namespace OOP
     public class NganHang
     {
         //khai bao constructor
-        private string tenNganHang;
-        private string soTK;
-        public NganHang(string tenNganHang, string soTK)
-        {
-            this.tenNganHang = tenNganHang;
-            this.soTK = soTK;
-
-        }
-        //khai bao properties 
-        public string TenNganHang//viet hoa chu dau de phan biet
-        {
-            get { return tenNganHang; }
-            set { tenNganHang = value; }
-        }
-        public string SoTK
-        {
-            get { return soTK; }
-            set { soTK = value; }
-
-        }
+        
+        private string tenNganHang {  get; set; }
+        private string soTK {  get; set; }
+        
+        
+        
+      
         
         //method
 
-        public void NhapNganHang(string tenNganHang, string soTK)
+        public void NhapNganHang()
         {
-
-            TenNganHang = tenNganHang;
-            SoTK = soTK;
+            Console.WriteLine("nhap ten ngan hang");
+            tenNganHang = Console.ReadLine();
+            Console.WriteLine("nhap so tai khoan");
+            soTK = Console.ReadLine();
         }
         public void XuatNganHang()
         {
