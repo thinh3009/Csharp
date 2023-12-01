@@ -1,0 +1,10 @@
+C:\Users\Administrator\source\repos\winform19\winform19\bin\Debug\winform19.exe.config
+C:\Users\Administrator\source\repos\winform19\winform19\bin\Debug\winform19.exe
+C:\Users\Administrator\source\repos\winform19\winform19\bin\Debug\winform19.pdb
+C:\Users\Administrator\source\repos\winform19\winform19\obj\Debug\winform19.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\winform19\winform19\obj\Debug\winform19.Form1.resources
+C:\Users\Administrator\source\repos\winform19\winform19\obj\Debug\winform19.Properties.Resources.resources
+C:\Users\Administrator\source\repos\winform19\winform19\obj\Debug\winform19.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\winform19\winform19\obj\Debug\winform19.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\winform19\winform19\obj\Debug\winform19.exe
+C:\Users\Administrator\source\repos\winform19\winform19\obj\Debug\winform19.pdb

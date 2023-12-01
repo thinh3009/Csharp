@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bai22winform", "bai22winform\bai22winform.csproj", "{28BA573D-C3E2-434D-BEA0-2F3472AEE67E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bai22.2", "bai22.2\bai22.2.csproj", "{D1B54313-537B-448E-A844-1D176B065E6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28BA573D-C3E2-434D-BEA0-2F3472AEE67E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28BA573D-C3E2-434D-BEA0-2F3472AEE67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28BA573D-C3E2-434D-BEA0-2F3472AEE67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28BA573D-C3E2-434D-BEA0-2F3472AEE67E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B54313-537B-448E-A844-1D176B065E6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B54313-537B-448E-A844-1D176B065E6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B54313-537B-448E-A844-1D176B065E6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B54313-537B-448E-A844-1D176B065E6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B1721FB-10F4-4F4A-914B-10A87EAEF179}
+	EndGlobalSection
+EndGlobal

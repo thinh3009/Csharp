@@ -1,0 +1,10 @@
+C:\Users\Administrator\source\repos\winformbai21\winformbai21\bin\Debug\winformbai21.exe.config
+C:\Users\Administrator\source\repos\winformbai21\winformbai21\bin\Debug\winformbai21.exe
+C:\Users\Administrator\source\repos\winformbai21\winformbai21\bin\Debug\winformbai21.pdb
+C:\Users\Administrator\source\repos\winformbai21\winformbai21\obj\Debug\winformbai21.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\winformbai21\winformbai21\obj\Debug\winformbai21.Form1.resources
+C:\Users\Administrator\source\repos\winformbai21\winformbai21\obj\Debug\winformbai21.Properties.Resources.resources
+C:\Users\Administrator\source\repos\winformbai21\winformbai21\obj\Debug\winformbai21.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\winformbai21\winformbai21\obj\Debug\winformbai21.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\winformbai21\winformbai21\obj\Debug\winformbai21.exe
+C:\Users\Administrator\source\repos\winformbai21\winformbai21\obj\Debug\winformbai21.pdb

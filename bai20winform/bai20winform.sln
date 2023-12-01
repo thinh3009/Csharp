@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bai20winform", "bai20winform\bai20winform.csproj", "{6E9C15E8-C0F7-4584-B829-910C0DEB7660}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E9C15E8-C0F7-4584-B829-910C0DEB7660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9C15E8-C0F7-4584-B829-910C0DEB7660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9C15E8-C0F7-4584-B829-910C0DEB7660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9C15E8-C0F7-4584-B829-910C0DEB7660}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66514410-700B-4F6F-B73B-EAA91291692D}
+	EndGlobalSection
+EndGlobal
