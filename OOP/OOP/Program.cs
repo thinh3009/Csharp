@@ -21,8 +21,7 @@ namespace OOP
             TenHang hang= new TenHang();
             NganHang bank = new NganHang();
             cty.XuatNganHang();
-            cty.XuatCongty();
-            bank.XuatNganHang();
+            
             
             
 

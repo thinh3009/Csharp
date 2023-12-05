@@ -12,3 +12,10 @@ D:\new\Csharp\OOP\OOP\obj\Debug\OOP.csproj.AssemblyReference.cache
 D:\new\Csharp\OOP\OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
 D:\new\Csharp\OOP\OOP\obj\Debug\OOP.exe
 D:\new\Csharp\OOP\OOP\obj\Debug\OOP.pdb
+D:\hoc\myCode\Csharp\OOP\OOP\bin\Debug\OOP.exe.config
+D:\hoc\myCode\Csharp\OOP\OOP\bin\Debug\OOP.exe
+D:\hoc\myCode\Csharp\OOP\OOP\bin\Debug\OOP.pdb
+D:\hoc\myCode\Csharp\OOP\OOP\obj\Debug\OOP.csproj.AssemblyReference.cache
+D:\hoc\myCode\Csharp\OOP\OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
+D:\hoc\myCode\Csharp\OOP\OOP\obj\Debug\OOP.exe
+D:\hoc\myCode\Csharp\OOP\OOP\obj\Debug\OOP.pdb
