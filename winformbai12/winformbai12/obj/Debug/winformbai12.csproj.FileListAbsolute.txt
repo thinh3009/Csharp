@@ -12,3 +12,17 @@ C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai12\winformbai12\obj
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai12\winformbai12\obj\Debug\winformbai12.csproj.CoreCompileInputs.cache
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai12\winformbai12\obj\Debug\winformbai12.exe
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\winformbai12\winformbai12\obj\Debug\winformbai12.pdb
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\bin\Debug\winformbai12.exe.config
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\bin\Debug\winformbai12.exe
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\bin\Debug\winformbai12.pdb
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\obj\Debug\winformbai12.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\obj\Debug\winformbai12.Form1.resources
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\obj\Debug\winformbai12.frm1.resources
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\obj\Debug\winformbai12.frm2.resources
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\obj\Debug\winformbai12.frm3.resources
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\obj\Debug\winformbai12.frm4.resources
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\obj\Debug\winformbai12.Properties.Resources.resources
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\obj\Debug\winformbai12.csproj.GenerateResource.cache
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\obj\Debug\winformbai12.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\obj\Debug\winformbai12.exe
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformbai12\winformbai12\obj\Debug\winformbai12.pdb

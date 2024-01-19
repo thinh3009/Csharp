@@ -5,3 +5,10 @@ C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18.3_lamFile\bai18.3_lamFi
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18.3_lamFile\bai18.3_lamFile\obj\Debug\bai18.3_lamFile.csproj.CoreCompileInputs.cache
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18.3_lamFile\bai18.3_lamFile\obj\Debug\bai18.3_lamFile.exe
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai18.3_lamFile\bai18.3_lamFile\obj\Debug\bai18.3_lamFile.pdb
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai18.3_lamFile\bai18.3_lamFile\bin\Debug\bai18.3_lamFile.exe.config
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai18.3_lamFile\bai18.3_lamFile\bin\Debug\bai18.3_lamFile.exe
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai18.3_lamFile\bai18.3_lamFile\bin\Debug\bai18.3_lamFile.pdb
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai18.3_lamFile\bai18.3_lamFile\obj\Debug\bai18.3_lamFile.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai18.3_lamFile\bai18.3_lamFile\obj\Debug\bai18.3_lamFile.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai18.3_lamFile\bai18.3_lamFile\obj\Debug\bai18.3_lamFile.exe
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai18.3_lamFile\bai18.3_lamFile\obj\Debug\bai18.3_lamFile.pdb

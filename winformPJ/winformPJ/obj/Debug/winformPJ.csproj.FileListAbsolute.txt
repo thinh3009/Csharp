@@ -1,0 +1,11 @@
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformPJ\winformPJ\bin\Debug\winformPJ.exe.config
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformPJ\winformPJ\bin\Debug\winformPJ.exe
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformPJ\winformPJ\bin\Debug\winformPJ.pdb
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformPJ\winformPJ\obj\Debug\winformPJ.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformPJ\winformPJ\obj\Debug\winformPJ.frmBanHang.resources
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformPJ\winformPJ\obj\Debug\winformPJ.Properties.Resources.resources
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformPJ\winformPJ\obj\Debug\winformPJ.csproj.GenerateResource.cache
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformPJ\winformPJ\obj\Debug\winformPJ.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformPJ\winformPJ\obj\Debug\winformPJ.exe
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformPJ\winformPJ\obj\Debug\winformPJ.pdb
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\winformPJ\winformPJ\obj\Debug\winformPJ.frmLogin.resources

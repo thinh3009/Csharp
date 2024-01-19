@@ -5,3 +5,10 @@ C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai21\bai21\obj\Debug\bai21.c
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai21\bai21\obj\Debug\bai21.csproj.CoreCompileInputs.cache
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai21\bai21\obj\Debug\bai21.exe
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai21\bai21\obj\Debug\bai21.pdb
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai21\bai21\bin\Debug\bai21.exe.config
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai21\bai21\bin\Debug\bai21.exe
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai21\bai21\bin\Debug\bai21.pdb
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai21\bai21\obj\Debug\bai21.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai21\bai21\obj\Debug\bai21.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai21\bai21\obj\Debug\bai21.exe
+C:\Users\buidu\OneDrive\Máy tính\myCode\Csharp\bai21\bai21\obj\Debug\bai21.pdb
