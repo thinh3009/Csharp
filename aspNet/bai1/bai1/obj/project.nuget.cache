@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/pWiSVtbMDqY2htCapHsiQFQo0mUoP2EcD8mQhPnSfmBDbmcL8QquQDROLARZ7A0/6tulppdO2qY9QZxi+iajA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\buidu\\OneDrive\\Máy tính\\myCode\\Csharp\\aspNet\\bai1\\bai1\\bai1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\buidu\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512"
+  ],
+  "logs": []
+}
