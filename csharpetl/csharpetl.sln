@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharpetl", "csharpetl\csharpetl.csproj", "{869C8D4E-C776-418D-8B5F-32AA453D5A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oksa", "oksa\oksa.csproj", "{FE7C0475-6825-47E3-9164-52A0E5795F5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{869C8D4E-C776-418D-8B5F-32AA453D5A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{869C8D4E-C776-418D-8B5F-32AA453D5A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{869C8D4E-C776-418D-8B5F-32AA453D5A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{869C8D4E-C776-418D-8B5F-32AA453D5A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE7C0475-6825-47E3-9164-52A0E5795F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE7C0475-6825-47E3-9164-52A0E5795F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE7C0475-6825-47E3-9164-52A0E5795F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE7C0475-6825-47E3-9164-52A0E5795F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {791B8D16-AC4E-4EF6-B07F-20A4543E3F87}
+	EndGlobalSection
+EndGlobal

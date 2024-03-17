@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CE9F8A98-F001-49BD-8B99-46458D634FB1}|baitapb4\\baitapb4.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\baitapb4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE9F8A98-F001-49BD-8B99-46458D634FB1}|baitapb4\\baitapb4.csproj|solutionrelative:baitapb4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8AF762-3F48-40F2-B662-3B2028234A5E}|bai4\\bai4.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\bai4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8AF762-3F48-40F2-B662-3B2028234A5E}|bai4\\bai4.csproj|solutionrelative:bai4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{960360B2-82CA-4B1A-9ACF-6B73533A7844}|baitap2b4\\baitap2b4.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\thiscode\\csharp\\bai4\\baitap2b4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{960360B2-82CA-4B1A-9ACF-6B73533A7844}|baitap2b4\\baitap2b4.csproj|solutionrelative:baitap2b4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B0D0398-E72E-4B16-BD45-F1F14026803D}|bai4-2\\bai4-2.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\bai4-2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B0D0398-E72E-4B16-BD45-F1F14026803D}|bai4-2\\bai4-2.csproj|solutionrelative:bai4-2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\bai4-2\\Program.cs",
+              "RelativeDocumentMoniker": "bai4-2\\Program.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\bai4-2\\Program.cs",
+              "RelativeToolTip": "bai4-2\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T10:19:23.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\baitap2b4\\Program.cs",
+              "RelativeDocumentMoniker": "baitap2b4\\Program.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\baitap2b4\\Program.cs",
+              "RelativeToolTip": "baitap2b4\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T10:19:23.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\bai4\\Program.cs",
+              "RelativeDocumentMoniker": "bai4\\Program.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\bai4\\Program.cs",
+              "RelativeToolTip": "bai4\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T10:19:23.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\baitapb4\\Program.cs",
+              "RelativeDocumentMoniker": "baitapb4\\Program.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\thisCode\\Csharp\\bai4\\baitapb4\\Program.cs",
+              "RelativeToolTip": "baitapb4\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T10:19:23.451Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1202 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/11/2024 3:10:55 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="THINH"
+  DTS:CreatorName="THINH\buidu"
+  DTS:DTSID="{5153A8A9-96E4-4069-8ED0-A292D0DB8A6C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{36305987-D35C-4497-8226-8A0702CEC8FB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{E55FD9CC-7FC7-476B-B9EE-84079600955C}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\buidu\OneDrive\Máy tính\sự kiẹn.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{9B0B628D-D0BA-44D2-AAB4-6A0BB8B61776}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\buidu\OneDrive\Máy tính\data.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[THINH.wareHouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6A1B4231-A593-4DC0-A4B4-88692F5A213E}"
+      DTS:ObjectName="THINH.wareHouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=THINH;Initial Catalog=wareHouse;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[THINH.wareHouse 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FAE67860-3964-47DC-B5A7-14E9581FF384}"
+      DTS:ObjectName="THINH.wareHouse 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=THINH;Initial Catalog=wareHouse;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{FAE67860-3964-47DC-B5A7-14E9581FF384}THINH.wareHouse 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\data1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E923A2E2-8B1F-49D9-91F6-9E63C0B0E5BA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="data1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\data1\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\data1\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\data1\Derived Column.Inputs[Derived Column Input].Columns[giá bán tại nhà]"
+                      cachedDataType="r8"
+                      cachedName="giá bán tại nhà"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[giá bán tại nhà]" />
+                    <inputColumn
+                      refId="Package\data1\Derived Column.Inputs[Derived Column Input].Columns[bán tại công ty]"
+                      cachedDataType="r8"
+                      cachedName="bán tại công ty"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[bán tại công ty]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\data1\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\data1\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\data1\Derived Column.Outputs[Derived Column Output].Columns[gia ban]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\data1\Derived Column.Outputs[Derived Column Output].Columns[gia ban]"
+                      name="gia ban"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[bán tại công ty]} - #{Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[giá bán tại nhà]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">[bán tại công ty] - [giá bán tại nhà]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\data1\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\data1\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\data1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\data1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\data1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\data1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\data1\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\data1\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\data1\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\data1\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\data1\Derived Column 1.Outputs[Derived Column Output].Columns[gia ban]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\data1\Derived Column 1.Outputs[Derived Column Output].Columns[gia ban]"
+                      name="gia ban"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"gia ban le"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"gia ban le"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\data1\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\data1\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\data1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\data1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\data1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\data1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\data1\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\data1\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\data1\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[mã sản phẩm]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\data1\Excel Source.Outputs[Excel Source Output].ExternalColumns[mã sản phẩm]"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[mã sản phẩm]"
+                      name="mã sản phẩm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[số lượng tồn]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\data1\Excel Source.Outputs[Excel Source Output].ExternalColumns[số lượng tồn]"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[số lượng tồn]"
+                      name="số lượng tồn"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[loại]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\data1\Excel Source.Outputs[Excel Source Output].ExternalColumns[loại]"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[loại]"
+                      name="loại"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[phương thức vẫn chuyển]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\data1\Excel Source.Outputs[Excel Source Output].ExternalColumns[phương thức vẫn chuyển]"
+                      length="255"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[phương thức vẫn chuyển]"
+                      name="phương thức vẫn chuyển"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Output].ExternalColumns[mã sản phẩm]"
+                      dataType="r8"
+                      name="mã sản phẩm" />
+                    <externalMetadataColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Output].ExternalColumns[số lượng tồn]"
+                      dataType="r8"
+                      name="số lượng tồn" />
+                    <externalMetadataColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Output].ExternalColumns[loại]"
+                      dataType="r8"
+                      name="loại" />
+                    <externalMetadataColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Output].ExternalColumns[phương thức vẫn chuyển]"
+                      dataType="wstr"
+                      length="255"
+                      name="phương thức vẫn chuyển" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\data1\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[mã sản phẩm]"
+                      dataType="r8"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[mã sản phẩm]"
+                      name="mã sản phẩm" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[số lượng tồn]"
+                      dataType="r8"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[số lượng tồn]"
+                      name="số lượng tồn" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[loại]"
+                      dataType="r8"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[loại]"
+                      name="loại" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[phương thức vẫn chuyển]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[phương thức vẫn chuyển]"
+                      name="phương thức vẫn chuyển" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\data1\Excel Source 1"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source 1"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\data1\Excel Source 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\data1\Excel Source 1.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[tên sản phẩm]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[tên sản phẩm]"
+                      length="255"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[tên sản phẩm]"
+                      name="tên sản phẩm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[mã sản  phẩm]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[mã sản  phẩm]"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[mã sản  phẩm]"
+                      name="mã sản  phẩm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[ngày nhập]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[ngày nhập]"
+                      length="255"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[ngày nhập]"
+                      name="ngày nhập"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[ngày sản xuất]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[ngày sản xuất]"
+                      length="255"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[ngày sản xuất]"
+                      name="ngày sản xuất"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[giá bán tại nhà]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[giá bán tại nhà]"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[giá bán tại nhà]"
+                      name="giá bán tại nhà"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[bán tại công ty]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[bán tại công ty]"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[bán tại công ty]"
+                      name="bán tại công ty"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[tên sản phẩm]"
+                      dataType="wstr"
+                      length="255"
+                      name="tên sản phẩm" />
+                    <externalMetadataColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[mã sản  phẩm]"
+                      dataType="r8"
+                      name="mã sản  phẩm" />
+                    <externalMetadataColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[ngày nhập]"
+                      dataType="wstr"
+                      length="255"
+                      name="ngày nhập" />
+                    <externalMetadataColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[ngày sản xuất]"
+                      dataType="wstr"
+                      length="255"
+                      name="ngày sản xuất" />
+                    <externalMetadataColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[giá bán tại nhà]"
+                      dataType="r8"
+                      name="giá bán tại nhà" />
+                    <externalMetadataColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[bán tại công ty]"
+                      dataType="r8"
+                      name="bán tại công ty" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[tên sản phẩm]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[tên sản phẩm]"
+                      name="tên sản phẩm" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[mã sản  phẩm]"
+                      dataType="r8"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[mã sản  phẩm]"
+                      name="mã sản  phẩm" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ngày nhập]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ngày nhập]"
+                      name="ngày nhập" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ngày sản xuất]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ngày sản xuất]"
+                      name="ngày sản xuất" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[giá bán tại nhà]"
+                      dataType="r8"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[giá bán tại nhà]"
+                      name="giá bán tại nhà" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[bán tại công ty]"
+                      dataType="r8"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[bán tại công ty]"
+                      name="bán tại công ty" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\data1\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[OLE DB Destination]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\data1\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[THINH.wareHouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[THINH.wareHouse]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[mã sản phẩm]"
+                      cachedDataType="r8"
+                      cachedName="mã sản phẩm"
+                      externalMetadataColumnId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[mã sản phẩm]"
+                      lineageId="Package\data1\Union All.Outputs[Union All Output 1].Columns[mã sản phẩm]" />
+                    <inputColumn
+                      refId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[số lượng tồn]"
+                      cachedDataType="r8"
+                      cachedName="số lượng tồn"
+                      externalMetadataColumnId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[số lượng tồn]"
+                      lineageId="Package\data1\Union All.Outputs[Union All Output 1].Columns[số lượng tồn]" />
+                    <inputColumn
+                      refId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[loại]"
+                      cachedDataType="r8"
+                      cachedName="loại"
+                      externalMetadataColumnId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[loại]"
+                      lineageId="Package\data1\Union All.Outputs[Union All Output 1].Columns[loại]" />
+                    <inputColumn
+                      refId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[phương thức vẫn chuyển]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="phương thức vẫn chuyển"
+                      externalMetadataColumnId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[phương thức vẫn chuyển]"
+                      lineageId="Package\data1\Union All.Outputs[Union All Output 1].Columns[phương thức vẫn chuyển]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[mã sản phẩm]"
+                      dataType="r8"
+                      name="mã sản phẩm" />
+                    <externalMetadataColumn
+                      refId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[số lượng tồn]"
+                      dataType="r8"
+                      name="số lượng tồn" />
+                    <externalMetadataColumn
+                      refId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[loại]"
+                      dataType="r8"
+                      name="loại" />
+                    <externalMetadataColumn
+                      refId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[phương thức vẫn chuyển]"
+                      dataType="wstr"
+                      length="255"
+                      name="phương thức vẫn chuyển" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\data1\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\data1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\data1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\data1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\data1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\data1\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\data1\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\data1\Union All.Inputs[Union All Input 2].Columns[mã sản  phẩm]"
+                      cachedDataType="r8"
+                      cachedName="mã sản  phẩm"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[mã sản  phẩm]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\data1\Union All.Outputs[Union All Output 1].Columns[mã sản phẩm]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\data1\Union All.Inputs[Union All Input 2].Columns[gia ban]"
+                      cachedDataType="r8"
+                      cachedName="gia ban"
+                      lineageId="Package\data1\Derived Column.Outputs[Derived Column Output].Columns[gia ban]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\data1\Union All.Outputs[Union All Output 1].Columns[loại]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\data1\Union All.Inputs[Union All Input 2].Columns[bán tại công ty]"
+                      cachedDataType="r8"
+                      cachedName="bán tại công ty"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[bán tại công ty]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\data1\Union All.Outputs[Union All Output 1].Columns[số lượng tồn]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\data1\Union All.Inputs[Union All Input 2].Columns[ngày sản xuất]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ngày sản xuất"
+                      lineageId="Package\data1\Excel Source 1.Outputs[Excel Source Output].Columns[ngày sản xuất]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\data1\Union All.Outputs[Union All Output 1].Columns[phương thức vẫn chuyển]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\data1\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\data1\Union All.Inputs[Union All Input 3].Columns[mã sản phẩm]"
+                      cachedDataType="r8"
+                      cachedName="mã sản phẩm"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[mã sản phẩm]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\data1\Union All.Outputs[Union All Output 1].Columns[mã sản phẩm]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\data1\Union All.Inputs[Union All Input 3].Columns[số lượng tồn]"
+                      cachedDataType="r8"
+                      cachedName="số lượng tồn"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[số lượng tồn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\data1\Union All.Outputs[Union All Output 1].Columns[số lượng tồn]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\data1\Union All.Inputs[Union All Input 3].Columns[loại]"
+                      cachedDataType="r8"
+                      cachedName="loại"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[loại]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\data1\Union All.Outputs[Union All Output 1].Columns[loại]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\data1\Union All.Inputs[Union All Input 3].Columns[phương thức vẫn chuyển]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="phương thức vẫn chuyển"
+                      lineageId="Package\data1\Excel Source.Outputs[Excel Source Output].Columns[phương thức vẫn chuyển]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\data1\Union All.Outputs[Union All Output 1].Columns[phương thức vẫn chuyển]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\data1\Union All.Inputs[Union All Input 1]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\data1\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\data1\Union All.Outputs[Union All Output 1].Columns[mã sản phẩm]"
+                      dataType="r8"
+                      lineageId="Package\data1\Union All.Outputs[Union All Output 1].Columns[mã sản phẩm]"
+                      name="mã sản phẩm" />
+                    <outputColumn
+                      refId="Package\data1\Union All.Outputs[Union All Output 1].Columns[số lượng tồn]"
+                      dataType="r8"
+                      lineageId="Package\data1\Union All.Outputs[Union All Output 1].Columns[số lượng tồn]"
+                      name="số lượng tồn" />
+                    <outputColumn
+                      refId="Package\data1\Union All.Outputs[Union All Output 1].Columns[loại]"
+                      dataType="r8"
+                      lineageId="Package\data1\Union All.Outputs[Union All Output 1].Columns[loại]"
+                      name="loại" />
+                    <outputColumn
+                      refId="Package\data1\Union All.Outputs[Union All Output 1].Columns[phương thức vẫn chuyển]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\data1\Union All.Outputs[Union All Output 1].Columns[phương thức vẫn chuyển]"
+                      name="phương thức vẫn chuyển" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\data1.Paths[Derived Column Output]"
+              endId="Package\data1\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\data1\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\data1.Paths[Derived Column Output1]"
+              endId="Package\data1\Union All.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\data1\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\data1.Paths[Excel Source Output]"
+              endId="Package\data1\Derived Column.Inputs[Derived Column Input]"
+              name="Excel Source Output"
+              startId="Package\data1\Excel Source 1.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\data1.Paths[Excel Source Output1]"
+              endId="Package\data1\Derived Column 1.Inputs[Derived Column Input]"
+              name="Excel Source Output"
+              startId="Package\data1\Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\data1.Paths[Union All Output 1]"
+              endId="Package\data1\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\data1\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="104.8,41.6"
+          Id="Package\data1"
+          TopLeft="514.999971861642,105.733332598077" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\data1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\data1\Excel Source"
+          TopLeft="542.999991908669,112.999998316169" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\data1\Excel Source 1"
+          TopLeft="849.999987334013,112.599999836087" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\data1\Derived Column"
+          TopLeft="859.999987185001,255.999996185303" />
+        <EdgeLayout
+          Id="Package\data1.Paths[Excel Source Output]"
+          TopLeft="919.999987334013,154.199999836087">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.3999998509884,101.799996349216"
+              Start="0,0"
+              End="16.3999998509884,94.2999963492155">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.8999981746078" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.8999981746078"
+                    Point2="0,50.8999981746078"
+                    Point3="4,50.8999981746078" />
+                  <mssgle:LineSegment
+                    End="12.3999998509884,50.8999981746078" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.3999998509884,50.8999981746078"
+                    Point2="16.3999998509884,50.8999981746078"
+                    Point3="16.3999998509884,54.8999981746078" />
+                  <mssgle:LineSegment
+                    End="16.3999998509884,94.2999963492155" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\data1\Union All"
+          TopLeft="731.99998909235,420.999993726611" />
+        <EdgeLayout
+          Id="Package\data1.Paths[Derived Column Output]"
+          TopLeft="936.399987185001,297.599996185303">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-125.733331425985,123.399997541308"
+              Start="0,0"
+              End="-125.733331425985,115.899997541308">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.0657880178799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,69.0657880178799"
+                    Point2="0,73.0657880178799"
+                    Point3="-4,73.0657880178799" />
+                  <mssgle:LineSegment
+                    End="-121.733331425985,73.0657880178799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-121.733331425985,73.0657880178799"
+                    Point2="-125.733331425985,73.0657880178799"
+                    Point3="-125.733331425985,77.0657880178799" />
+                  <mssgle:LineSegment
+                    End="-125.733331425985,115.899997541308" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\data1\OLE DB Destination"
+          TopLeft="1048.99998436868,437.999993473291" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\data1\Derived Column 1"
+          TopLeft="508.999992415309,256.999996170402" />
+        <EdgeLayout
+          Id="Package\data1.Paths[Excel Source Output1]"
+          TopLeft="612.999991908669,154.599998316169">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-27.5999994933604,102.399997854233"
+              Start="0,0"
+              End="-27.5999994933604,94.8999978542328">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.1999989271164" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.1999989271164"
+                    Point2="0,51.1999989271164"
+                    Point3="-4,51.1999989271164" />
+                  <mssgle:LineSegment
+                    End="-23.5999994933604,51.1999989271164" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23.5999994933604,51.1999989271164"
+                    Point2="-27.5999994933604,51.1999989271164"
+                    Point3="-27.5999994933604,55.1999989271164" />
+                  <mssgle:LineSegment
+                    End="-27.5999994933604,94.8999978542328" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\data1.Paths[Derived Column Output1]"
+          TopLeft="585.399992415309,298.599996170402">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="187.933330010374,122.399997556209"
+              Start="0,0"
+              End="187.933330010374,114.899997556209">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.4736827635451" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,68.4736827635451"
+                    Point2="0,72.4736827635451"
+                    Point3="4,72.4736827635451" />
+                  <mssgle:LineSegment
+                    End="183.933330010374,72.4736827635451" />
+                  <mssgle:CubicBezierSegment
+                    Point1="183.933330010374,72.4736827635451"
+                    Point2="187.933330010374,72.4736827635451"
+                    Point3="187.933330010374,76.4736827635451" />
+                  <mssgle:LineSegment
+                    End="187.933330010374,114.899997556209" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\data1.Paths[Union All Output 1]"
+          TopLeft="851.99998909235,441.799993726611">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="196.999995276332,16.9999997466804"
+              Start="0,0"
+              End="189.499995276332,16.9999997466804">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="94.4999976381661,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="94.4999976381661,0"
+                    Point2="98.4999976381661,0"
+                    Point3="98.4999976381661,4" />
+                  <mssgle:LineSegment
+                    End="98.4999976381661,12.9999997466804" />
+                  <mssgle:CubicBezierSegment
+                    Point1="98.4999976381661,12.9999997466804"
+                    Point2="98.4999976381661,16.9999997466804"
+                    Point3="102.499997638166,16.9999997466804" />
+                  <mssgle:LineSegment
+                    End="189.499995276332,16.9999997466804" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\data1\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\data1\Excel Source 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\data1\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

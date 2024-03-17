@@ -1,0 +1,2024 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/12/2024 9:52:48 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="THINH"
+  DTS:CreatorName="THINH\buidu"
+  DTS:DTSID="{E813573D-C2DE-4FF2-949F-39EB6ADE33BB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{C4351A36-2F2A-4509-81B1-47E2E9C3EB90}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{E163AA47-23DB-4F89-AB31-C3EBF02BAC86}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\buidu\Downloads\archive (3)\Canadasalesdata.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{30059BB8-7795-4C52-9EC1-A0F1330E7A4C}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\buidu\Downloads\archive (3)\Canadasalesdata.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{10B36139-40BB-4AAB-8CCE-1D7E9369E969}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\buidu\Downloads\archive (2)\norway_new_car_sales_by_model.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[THINH.wareHouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EFD42965-FA14-48C4-8EAC-D0F0EAAEB3F9}"
+      DTS:ObjectName="THINH.wareHouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=THINH;Initial Catalog=wareHouse;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F6FB33F8-6880-4B5E-ABC3-773760DCDFD4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\add"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="add"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\add.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\add.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\add.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\add.Outputs[Derived Column Output].Columns[check]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\Data Flow Task\add.Outputs[Derived Column Output].Columns[check]"
+                      name="check"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Canada"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Canada"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\add.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\add.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\add.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\add.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\add.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\add.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\add 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="add 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\add 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\add 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\add 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\add 1.Outputs[Derived Column Output].Columns[check]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\Data Flow Task\add 1.Outputs[Derived Column Output].Columns[check]"
+                      name="check"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Gemary"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Gemary"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\add 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\add 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\add 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\add 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\add 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\add 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Canada Sale"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Canada Sale"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Canadasalesdata$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Canada Sale.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Year]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Year]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Category]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Model]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Model]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Model]"
+                      name="Model"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Jan]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Jan]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Jan]"
+                      name="Jan"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Feb]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Feb]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Feb]"
+                      name="Feb"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Mar]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Mar]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Mar]"
+                      name="Mar"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Apr]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Apr]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Apr]"
+                      name="Apr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[May]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[May]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[May]"
+                      name="May"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Jun]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Jun]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Jun]"
+                      name="Jun"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Jul]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Jul]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Jul]"
+                      name="Jul"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Aug]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Aug]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Aug]"
+                      name="Aug"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Sep]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Sep]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Sep]"
+                      name="Sep"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Oct]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Oct]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Oct]"
+                      name="Oct"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Nov]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Nov]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Nov]"
+                      name="Nov"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Dec]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Dec]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Dec]"
+                      name="Dec"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Sumofsales]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Sumofsales]"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Sumofsales]"
+                      name="Sumofsales"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Year]"
+                      dataType="r8"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Model]"
+                      dataType="wstr"
+                      length="255"
+                      name="Model" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Jan]"
+                      dataType="r8"
+                      name="Jan" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Feb]"
+                      dataType="r8"
+                      name="Feb" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Mar]"
+                      dataType="r8"
+                      name="Mar" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Apr]"
+                      dataType="r8"
+                      name="Apr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[May]"
+                      dataType="r8"
+                      name="May" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Jun]"
+                      dataType="r8"
+                      name="Jun" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Jul]"
+                      dataType="r8"
+                      name="Jul" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Aug]"
+                      dataType="r8"
+                      name="Aug" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Sep]"
+                      dataType="r8"
+                      name="Sep" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Oct]"
+                      dataType="r8"
+                      name="Oct" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Nov]"
+                      dataType="r8"
+                      name="Nov" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Dec]"
+                      dataType="r8"
+                      name="Dec" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].ExternalColumns[Sumofsales]"
+                      dataType="r8"
+                      name="Sumofsales" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Model]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Model]"
+                      name="Model" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Jan]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Jan]"
+                      name="Jan" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Feb]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Feb]"
+                      name="Feb" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Mar]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Mar]"
+                      name="Mar" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Apr]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Apr]"
+                      name="Apr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[May]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[May]"
+                      name="May" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Jun]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Jun]"
+                      name="Jun" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Jul]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Jul]"
+                      name="Jul" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Aug]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Aug]"
+                      name="Aug" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Sep]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Sep]"
+                      name="Sep" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Oct]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Oct]"
+                      name="Oct" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Nov]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Nov]"
+                      name="Nov" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Dec]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Dec]"
+                      name="Dec" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Sumofsales]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Sumofsales]"
+                      name="Sumofsales" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Year]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Check"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Check"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Check.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Check.Inputs[Derived Column Input].Columns[Year]"
+                      cachedDataType="r8"
+                      cachedName="Year"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Year]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Check.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Check.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Check.Outputs[Derived Column Output].Columns[oldOrnew]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Data Flow Task\Check.Outputs[Derived Column Output].Columns[oldOrnew]"
+                      name="oldOrnew"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Year]} == 2007 || #{Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Year]} == 2019 ? "old" : "new"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Year == 2007 || Year == 2019 ? "old" : "new"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Check.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Check.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Check.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Check.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Check.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Check.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Check 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Check 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Check 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Check 1.Inputs[Derived Column Input].Columns[Year]"
+                      cachedDataType="r8"
+                      cachedName="Year"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Year]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Check 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Check 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Check 1.Outputs[Derived Column Output].Columns[oldOrnew]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Data Flow Task\Check 1.Outputs[Derived Column Output].Columns[oldOrnew]"
+                      name="oldOrnew"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Year]} == 2007 || #{Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Year]} == 2019 ? "old" : "new"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Year == 2007 || Year == 2019 ? "old" : "new"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Check 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Check 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Check 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Check 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Check 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Check 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Gemary sales"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Gemary sales"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">norway_new_car_sales_by_model$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Gemary sales.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Year]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Year]"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Month]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Month]"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Month]"
+                      name="Month"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Make]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Make]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Make]"
+                      name="Make"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Model]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Model]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Model]"
+                      name="Model"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Quantity]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Quantity]"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Quantity]"
+                      name="Quantity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Pct]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Pct]"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Pct]"
+                      name="Pct"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Year]"
+                      dataType="r8"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Month]"
+                      dataType="r8"
+                      name="Month" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Make]"
+                      dataType="wstr"
+                      length="255"
+                      name="Make" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Model]"
+                      dataType="wstr"
+                      length="255"
+                      name="Model" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Quantity]"
+                      dataType="r8"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].ExternalColumns[Pct]"
+                      dataType="r8"
+                      name="Pct" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Year]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Month]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Month]"
+                      name="Month" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Make]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Make]"
+                      name="Make" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Model]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Model]"
+                      name="Model" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Quantity]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Quantity]"
+                      name="Quantity" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Pct]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[Pct]"
+                      name="Pct" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[carSales]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[THINH.wareHouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[THINH.wareHouse]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Year]"
+                      cachedDataType="r8"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Model]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Model"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Model]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Model]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Jan]"
+                      cachedDataType="r8"
+                      cachedName="Jan"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jan]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jan]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Feb]"
+                      cachedDataType="r8"
+                      cachedName="Feb"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Feb]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Feb]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Mar]"
+                      cachedDataType="r8"
+                      cachedName="Mar"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mar]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Mar]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Apr]"
+                      cachedDataType="r8"
+                      cachedName="Apr"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Apr]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Apr]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[May]"
+                      cachedDataType="r8"
+                      cachedName="May"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[May]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[May]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Jun]"
+                      cachedDataType="r8"
+                      cachedName="Jun"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jun]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jun]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Jul]"
+                      cachedDataType="r8"
+                      cachedName="Jul"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jul]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jul]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Aug]"
+                      cachedDataType="r8"
+                      cachedName="Aug"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Aug]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Aug]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sep]"
+                      cachedDataType="r8"
+                      cachedName="Sep"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sep]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sep]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Oct]"
+                      cachedDataType="r8"
+                      cachedName="Oct"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Oct]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Oct]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nov]"
+                      cachedDataType="r8"
+                      cachedName="Nov"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nov]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Nov]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Dec]"
+                      cachedDataType="r8"
+                      cachedName="Dec"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dec]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Dec]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sumofsales]"
+                      cachedDataType="r8"
+                      cachedName="Sumofsales"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sumofsales]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sumofsales]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[check]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="check"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[check]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[check]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[oldOrnew]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="oldOrnew"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[oldOrnew]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[oldOrnew]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      dataType="r8"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Model]"
+                      dataType="wstr"
+                      length="255"
+                      name="Model" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jan]"
+                      dataType="r8"
+                      name="Jan" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Feb]"
+                      dataType="r8"
+                      name="Feb" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mar]"
+                      dataType="r8"
+                      name="Mar" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Apr]"
+                      dataType="r8"
+                      name="Apr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[May]"
+                      dataType="r8"
+                      name="May" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jun]"
+                      dataType="r8"
+                      name="Jun" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jul]"
+                      dataType="r8"
+                      name="Jul" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Aug]"
+                      dataType="r8"
+                      name="Aug" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sep]"
+                      dataType="r8"
+                      name="Sep" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Oct]"
+                      dataType="r8"
+                      name="Oct" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nov]"
+                      dataType="r8"
+                      name="Nov" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dec]"
+                      dataType="r8"
+                      name="Dec" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sumofsales]"
+                      dataType="r8"
+                      name="Sumofsales" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[check]"
+                      dataType="wstr"
+                      length="6"
+                      name="check" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[oldOrnew]"
+                      dataType="wstr"
+                      length="3"
+                      name="oldOrnew" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Year]"
+                      cachedDataType="r8"
+                      cachedName="Year"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Year]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Model]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Model"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Model]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Model]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Jan]"
+                      cachedDataType="r8"
+                      cachedName="Jan"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Jan]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jan]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Feb]"
+                      cachedDataType="r8"
+                      cachedName="Feb"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Feb]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Feb]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Mar]"
+                      cachedDataType="r8"
+                      cachedName="Mar"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Mar]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Mar]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Apr]"
+                      cachedDataType="r8"
+                      cachedName="Apr"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Apr]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Apr]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[May]"
+                      cachedDataType="r8"
+                      cachedName="May"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[May]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[May]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Jun]"
+                      cachedDataType="r8"
+                      cachedName="Jun"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Jun]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jun]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Jul]"
+                      cachedDataType="r8"
+                      cachedName="Jul"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Jul]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jul]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Aug]"
+                      cachedDataType="r8"
+                      cachedName="Aug"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Aug]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Aug]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Sep]"
+                      cachedDataType="r8"
+                      cachedName="Sep"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Sep]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sep]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Oct]"
+                      cachedDataType="r8"
+                      cachedName="Oct"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Oct]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Oct]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Nov]"
+                      cachedDataType="r8"
+                      cachedName="Nov"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Nov]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Nov]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Dec]"
+                      cachedDataType="r8"
+                      cachedName="Dec"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Dec]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Dec]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Sumofsales]"
+                      cachedDataType="r8"
+                      cachedName="Sumofsales"
+                      lineageId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output].Columns[Sumofsales]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sumofsales]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[check]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="check"
+                      lineageId="Package\Data Flow Task\add.Outputs[Derived Column Output].Columns[check]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[check]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[oldOrnew]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="oldOrnew"
+                      lineageId="Package\Data Flow Task\Check.Outputs[Derived Column Output].Columns[oldOrnew]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[oldOrnew]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Year]"
+                      cachedDataType="r8"
+                      cachedName="Year"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Year]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Model]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Model"
+                      lineageId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output].Columns[Model]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Model]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[check]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="check"
+                      lineageId="Package\Data Flow Task\add 1.Outputs[Derived Column Output].Columns[check]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[check]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[oldOrnew]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="oldOrnew"
+                      lineageId="Package\Data Flow Task\Check 1.Outputs[Derived Column Output].Columns[oldOrnew]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[oldOrnew]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Year]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Model]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Model]"
+                      name="Model" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jan]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jan]"
+                      name="Jan" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Feb]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Feb]"
+                      name="Feb" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Mar]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Mar]"
+                      name="Mar" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Apr]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Apr]"
+                      name="Apr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[May]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[May]"
+                      name="May" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jun]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jun]"
+                      name="Jun" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jul]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Jul]"
+                      name="Jul" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Aug]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Aug]"
+                      name="Aug" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sep]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sep]"
+                      name="Sep" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Oct]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Oct]"
+                      name="Oct" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Nov]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Nov]"
+                      name="Nov" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Dec]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Dec]"
+                      name="Dec" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sumofsales]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sumofsales]"
+                      name="Sumofsales" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[check]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[check]"
+                      name="check" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[oldOrnew]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[oldOrnew]"
+                      name="oldOrnew" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Check.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\add.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task\Check 1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\add 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output2]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Check.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output3]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Check 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\add.Inputs[Derived Column Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Canada Sale.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output1]"
+              endId="Package\Data Flow Task\add 1.Inputs[Derived Column Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Gemary sales.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Union All Output 1]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="534.99997076889,122.199999150236" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Data Flow Task\Canada Sale"
+          TopLeft="584.999991282821,97.9999985396862" />
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\Data Flow Task\Gemary sales"
+          TopLeft="886.99998678267,104.999998435378" />
+        <NodeLayout
+          Size="96,41.6"
+          Id="Package\Data Flow Task\add"
+          TopLeft="584.999991282821,216.999996766448" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="654.199991282821,139.599998539686">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21.2000000000003,77.3999982267618"
+              Start="0,0"
+              End="-21.2000000000003,69.8999982267618">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.6999991133809" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.6999991133809"
+                    Point2="0,38.6999991133809"
+                    Point3="-4,38.6999991133809" />
+                  <mssgle:LineSegment
+                    End="-17.2000000000003,38.6999991133809" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.2000000000003,38.6999991133809"
+                    Point2="-21.2000000000003,38.6999991133809"
+                    Point3="-21.2000000000003,42.6999991133809" />
+                  <mssgle:LineSegment
+                    End="-21.2000000000003,69.8999982267618" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="108,41.6"
+          Id="Package\Data Flow Task\Check"
+          TopLeft="574.999991431832,316.999995276332" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="630.999991357327,258.599996766448">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.3999985098838"
+              Start="0,0"
+              End="0,50.8999985098838">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.8999985098838" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="96,41.6"
+          Id="Package\Data Flow Task\add 1"
+          TopLeft="902.999986544252,209.999996870756" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output1]"
+          TopLeft="954.599986663461,146.599998435378">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.3999984353781"
+              Start="0,0"
+              End="0,55.8999984353781">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.8999984353781" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="108,41.6"
+          Id="Package\Data Flow Task\Check 1"
+          TopLeft="887.999986767769,318.99999524653" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
+          TopLeft="950.999986544252,251.599996870756">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.99999977648292,67.3999983757734"
+              Start="0,0"
+              End="-8.99999977648292,59.8999983757734">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.6999991878867" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.6999991878867"
+                    Point2="0,33.6999991878867"
+                    Point3="-4,33.6999991878867" />
+                  <mssgle:LineSegment
+                    End="-4.99999977648292,33.6999991878867" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.99999977648292,33.6999991878867"
+                    Point2="-8.99999977648292,33.6999991878867"
+                    Point3="-8.99999977648292,37.6999991878867" />
+                  <mssgle:LineSegment
+                    End="-8.99999977648292,59.8999983757734" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Data Flow Task\Union All"
+          TopLeft="796.999988123775,438.99999345839" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output2]"
+          TopLeft="628.999991431832,358.599995276332">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="209.333330025275,80.3999981820583"
+              Start="0,0"
+              End="209.333330025275,72.8999981820583">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.6052620814819" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.6052620814819"
+                    Point2="0,47.6052620814819"
+                    Point3="4,47.6052620814819" />
+                  <mssgle:LineSegment
+                    End="205.333330025275,47.6052620814819" />
+                  <mssgle:CubicBezierSegment
+                    Point1="205.333330025275,47.6052620814819"
+                    Point2="209.333330025275,47.6052620814819"
+                    Point3="209.333330025275,51.6052620814819" />
+                  <mssgle:LineSegment
+                    End="209.333330025275,72.8999981820583" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output3]"
+          TopLeft="941.999986767769,360.59999524653">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-66.3333319773275,78.3999982118606"
+              Start="0,0"
+              End="-66.3333319773275,70.8999982118606">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.4210515728122" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.4210515728122"
+                    Point2="0,46.4210515728122"
+                    Point3="-4,46.4210515728122" />
+                  <mssgle:LineSegment
+                    End="-62.3333319773275,46.4210515728122" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-62.3333319773275,46.4210515728122"
+                    Point2="-66.3333319773275,46.4210515728122"
+                    Point3="-66.3333319773275,50.4210515728122" />
+                  <mssgle:LineSegment
+                    End="-66.3333319773275,70.8999982118606" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="1104.99998353422,442.999993398786" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="916.999988123775,461.799993428588">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="187.999995410443,0"
+              Start="0,0"
+              End="180.499995410443,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="180.499995410443,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Canada Sale">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Gemary sales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

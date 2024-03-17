@@ -5,3 +5,10 @@ C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai10\baitapb10_2\bin\Debug\b
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai10\baitapb10_2\bin\Debug\baitapb10_2.pdb
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai10\baitapb10_2\obj\Debug\baitapb10_2.exe
 C:\Users\buidu\OneDrive\Máy tính\code2\hocCsharp\bai10\baitapb10_2\obj\Debug\baitapb10_2.pdb
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\bai10\baitapb10_2\bin\Debug\baitapb10_2.exe.config
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\bai10\baitapb10_2\bin\Debug\baitapb10_2.exe
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\bai10\baitapb10_2\bin\Debug\baitapb10_2.pdb
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\bai10\baitapb10_2\obj\Debug\baitapb10_2.csproj.AssemblyReference.cache
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\bai10\baitapb10_2\obj\Debug\baitapb10_2.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\bai10\baitapb10_2\obj\Debug\baitapb10_2.exe
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\bai10\baitapb10_2\obj\Debug\baitapb10_2.pdb

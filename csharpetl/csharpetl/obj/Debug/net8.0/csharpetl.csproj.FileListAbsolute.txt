@@ -1,0 +1,15 @@
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\bin\Debug\net8.0\csharpetl.exe
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\bin\Debug\net8.0\csharpetl.deps.json
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\bin\Debug\net8.0\csharpetl.runtimeconfig.json
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\bin\Debug\net8.0\csharpetl.dll
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\bin\Debug\net8.0\csharpetl.pdb
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\obj\Debug\net8.0\csharpetl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\obj\Debug\net8.0\csharpetl.AssemblyInfoInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\obj\Debug\net8.0\csharpetl.AssemblyInfo.cs
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\obj\Debug\net8.0\csharpetl.csproj.CoreCompileInputs.cache
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\obj\Debug\net8.0\csharpetl.sourcelink.json
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\obj\Debug\net8.0\csharpetl.dll
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\obj\Debug\net8.0\refint\csharpetl.dll
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\obj\Debug\net8.0\csharpetl.pdb
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\obj\Debug\net8.0\csharpetl.genruntimeconfig.cache
+C:\Users\buidu\OneDrive\Máy tính\thisCode\Csharp\csharpetl\csharpetl\obj\Debug\net8.0\ref\csharpetl.dll

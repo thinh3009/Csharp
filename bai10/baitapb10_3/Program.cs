@@ -11,9 +11,9 @@ namespace baitapb10_3
         static void Main(string[] args)
         {
             int n = 0;
-            while (true)
+            while (n<=10)
             {
-                n++;//n=n+1
+                //n++;//n=n+1
                 Console.WriteLine("n=" + n);
             }
             Console.ReadKey();
